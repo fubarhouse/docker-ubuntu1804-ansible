@@ -14,8 +14,10 @@ RUN sed -i 's/^\($ModLoad imklog\)/#\1/' /etc/rsyslog.conf
 #ADD etc/rsyslog.d/50-default.conf /etc/rsyslog.d/50-default.conf
 
 # Install Ansible
-RUN add-apt-repository -y ppa:ansible/ansible \
-  && apt-get update \
+RUN \
+  # add-apt-repository -y ppa:ansible/ansible \
+  # && \
+  apt-get update \
   && apt-get install -y --no-install-recommends \
      ansible \
   && rm -rf /var/lib/apt/lists/* \
