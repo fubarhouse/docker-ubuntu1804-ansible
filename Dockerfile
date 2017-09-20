@@ -5,7 +5,7 @@ MAINTAINER Karl Hepworth
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
        python-software-properties python-pip \
-       software-properties-common \
+       python-setuptools software-properties-common \
        rsyslog systemd systemd-cron sudo \
     && rm -Rf /var/lib/apt/lists/* \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
